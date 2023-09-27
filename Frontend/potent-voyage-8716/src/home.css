@@ -1,0 +1,84 @@
+.h1{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size:50px;
+
+}
+.h2{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size:25px;
+  color: #1a7fa3;
+  font-family: 'Bariol Light',Arial;
+  /* font-size: 18px; */
+}
+.button{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'Bariol Light',Arial;
+}
+.mainh{
+  margin-top: 60px;
+}
+.head1{
+  padding-top: 20px;
+  font-size:20px;
+  font-weight: 100;
+
+}
+.head{
+  font-size:40px;
+  font-weight: lighter;
+  font-style: inherit;
+}
+.fimg{
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  gap: 20px;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fimg img{
+  width: 50px;
+}
+.grid{
+  margin: 140px;
+  margin-top: 50px;
+}
+.text{
+  font-weight: lighter;
+}
+.f1{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+ padding: 10px 10px 20px 30px;
+ font-family: sans-serif;
+ font-weight: lighter;
+ margin-top: 50px;
+ background-color: white;
+
+}
+.f1 img{
+  width: 30px;
+  height: 30px;
+}
+.mainf{
+  border: 1px solid red;
+  width: 85%;
+  height: 200px;
+  margin: 100px;
+background-color: rgb(85, 4, 161);
+}
