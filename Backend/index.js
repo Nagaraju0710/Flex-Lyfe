@@ -4,6 +4,7 @@ const express = require('express')
 const {userRouter} = require('./routes/user.Routes')
 const cors = require('cors')
 const {connection} = require('./db')
+const { contactRouter } = require('./routes/contactRouter')
 
 const app = express()
 app.use(cors());
@@ -15,6 +16,8 @@ app.get('/',(req,res)=>{
 
 
 app.use('/users',userRouter)
+app.use('/contact',contactRouter)
+
 
 app.listen(8080, async()=>{
      try{
