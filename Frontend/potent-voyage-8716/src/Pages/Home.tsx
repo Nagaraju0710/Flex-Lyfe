@@ -16,7 +16,7 @@ export default function Home() {
                     <p style={{ marginLeft: "10px", border: "3px solid lightblue", borderRadius: "10px", padding: "0px 10px", color: "blue", height: "35px" }}><a href="http://localhost:3000/login">LogIn</a></p>
                 </div>
                 <div style={{ marginLeft: "110px", marginTop: "20px" }}>
-                    <img style={{width:"1100px" ,height:"400px"}} src={home1} alt="" />
+                    <img style={{width:"1100px" ,height:"600px"}} src={home1} alt="" />
                     <div className="h1"><h1>Get in the Best Shape of Your Life</h1></div>
                     <div className="h2"><h1>Fitocracy gives you a private coach to help you reach any fitness goal.
                         All for an incredibly affordable price.</h1></div>
