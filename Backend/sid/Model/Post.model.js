@@ -4,6 +4,7 @@ const postSchema = mongoose.Schema({
     name: String,
     title:String,
     desc:String,
+    name:String
 },{
     versionKey: false
 });
