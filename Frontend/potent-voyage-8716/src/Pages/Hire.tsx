@@ -143,7 +143,19 @@ export default function Hire() {
                     </div>
 
                 </div>
-                
+            </div>
+
+            <div style={{marginTop:"50px" ,border:"3px solid blueviolet",height:"70px",width:"80%",marginLeft:"120px" ,fontFamily:"serif",fontSize:"20px",color:"blueviolet",borderRadius:"10px"}}>
+                <div>
+                    <a href=""><h1 style={{paddingTop:"30px"}}>Not Sure which coach is right for you? Ask FlexLyfe for a Recommendation.</h1></a>
+                </div>
+            </div>
+
+            <div style={{marginTop:"50px",border:"1px solid blueviolet" ,width:"80%",marginLeft:"120px",height:"100px",color:"white",backgroundColor:"blueviolet",borderRadius:"20px"}}>
+                <div style={{paddingTop:"20px"}}>
+                    <a href=""><h1 style={{fontSize:"30px" ,}}>Still not sure which Program is right for you?</h1></a>
+                    <a href=""><p>Ask FlexLyfe for a Recommandation</p></a>
+                </div>
             </div>
         </div>
 
