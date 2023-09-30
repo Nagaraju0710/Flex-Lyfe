@@ -9,6 +9,7 @@ const auth = (req,res,next) => {
       if(decoded){
         console.log(decoded);
         req.body.userID = decoded.userId;
+        req.body.name = decoded.name;
         next();
       }else{
         res.status(400).json({error: "Not Authorized"})
