@@ -7,27 +7,20 @@ import {BsHandbag} from 'react-icons/bs'
 
 import { color } from "framer-motion";
 import React from "react";
-export default function Navbar(){
+export default function AdminNavbar(){
 
     const links=[ 
         {
-            title:"Home",
-            path:"/"
+            title:"Dashboard",
+            path:"/dashboard"
     },
     ,{
-        title:"Hire a Coach",
-        path:"/hireacoach"
+        title:"Contact Details",
+        path:"/contactdetails"
     },{
-        title:"Our Story",
+        title:"Edit Story",
         path:"/ourstory"
-    },{
-        title:"Login",
-        path:"/login"
-    },
-    {
-        title:"Contact Us",
-        path:"/contactus"
-    }, 
+    }
    
 ]
 
@@ -41,18 +34,17 @@ export default function Navbar(){
     
 
   <Box>
- <Tabs size='md' variant='enclosed' width="220.5%" >
+ <Tabs size='md' variant='enclosed' width="290.5%" >
   <TabList  justifyContent="space-around"  >
     <Box display="flex" >
     {/* <Box><img src={myImage} alt="" width="100%" height="100%"/></Box> */}
-    <Tab><RouterLink to="/">Home</RouterLink></Tab>
-    <Tab><RouterLink to="/hireacoach">Hire a Coach</RouterLink></Tab>
-    <Tab><RouterLink to="/ourstory">Our Story</RouterLink></Tab>
-    <Tab><RouterLink to="/login">Login</RouterLink></Tab>
-    <Tab><RouterLink to="/contactus">Contact Us</RouterLink></Tab>
+    <Tab><RouterLink to="/admindashboard">Dashboard</RouterLink></Tab>
+    <Tab><RouterLink to="/admincontactdetails">Contact Details</RouterLink></Tab>
+    <Tab><RouterLink to="/adminourstory">Edit Story</RouterLink></Tab>
+   
     {/* <Spacer /> */}
     </Box>
-    <Button style={{color:'red',}} onClick={()=>{
+    <Button style={{color:'red'}} onClick={()=>{
       window.location.href="http://localhost:3000/login"
     }}>LogOut</Button>
   </TabList>

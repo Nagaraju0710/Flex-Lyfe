@@ -1,7 +1,10 @@
 import React from "react";
+import Navbar from "../Components/Navbar";
 
 export default function SignUp(){
     return(
-        <div>SignUp Page</div>
+        <div>
+<Navbar/>
+        </div>
     )
 }
