@@ -20,7 +20,7 @@ export default function Hire() {
                     <p style={{ marginLeft: "10px", border: "3px solid lightblue", borderRadius: "10px", padding: "0px 10px", color: "blue", height: "35px" }}><a href="http://localhost:3000/login">LogIn</a></p>
                 </div>
                 <div className="upside">
-                    <div>
+                    <div  style={{marginLeft:'50px'}}> 
                         <h1>How it Works</h1>
                     </div>
                     <div>
