@@ -7,9 +7,11 @@ import img4 from "../Imges/img4.png"
 // import img12 from "../Imges/img12.png"
 import { Button } from "@chakra-ui/react";
 import { Footer } from "../Components/footer";
+import Navbar from "../Components/Navbar";
 export default function Home() {
     return (
         <div>
+            <Navbar/>
             <div>
                 <div style={{ display: "flex", marginLeft: "150px", marginTop: "50px" }}>
                     <h1 style={{ fontSize: "40px", fontFamily: "Georgia, serif", color: "Highlight" }}>FLEXLYFE </h1>

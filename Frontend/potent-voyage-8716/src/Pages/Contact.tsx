@@ -1,6 +1,7 @@
 import { Box, Input, Button, useToast } from '@chakra-ui/react'
 import { useState } from 'react';
 import axios from 'axios'
+import Navbar from '../Components/Navbar';
 
 export const Contact = () => {
     const toast = useToast()
@@ -33,6 +34,8 @@ export const Contact = () => {
     }
 
     return (
+        <div>
+            <Navbar/>
         <Box w={'80%'} m={'1cm auto'}>
             <Box display={'flex'} w={'100%'} m={'10px auto'} justifyContent={'space-between'} flexDirection={['column', 'column', 'row']} gap={'15px'}>
                 <Box w={'100%'}>
@@ -60,5 +63,6 @@ export const Contact = () => {
             </Box>
 
         </Box>
+        </div>
     )
 }
