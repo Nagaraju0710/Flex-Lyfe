@@ -27,7 +27,7 @@ postRouter.post("/add", async (req, res) => {
     }
 })
 
-// Get post
+// Get posts
 
 postRouter.get('/', async (req, res) => {
     try {
@@ -37,6 +37,19 @@ postRouter.get('/', async (req, res) => {
         res.send({ "Error": err })
     }
 })
+
+// // Get all posts
+
+// postRouter.get('/all', async (req, res) => {
+//     try {
+//         const posts = await PostModel.find()
+//         console.log('posts',posts)
+//         res.status(200).send(posts)
+//     } catch (err) {
+//         res.send({ "Error": err })
+//     }
+// })
+
 
 // patch
 
