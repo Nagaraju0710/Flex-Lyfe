@@ -2,6 +2,7 @@
 
 const express = require('express')
 const {userRouter} = require('./routes/user.Router')
+const {adminuserRouter} = require('./routes/adminuser.Router')
 const {postRouter} = require('./routes/post.Router')
 const cors = require('cors')
 const {connection} = require('./db')
@@ -18,6 +19,7 @@ app.get('/',(req,res)=>{
 
 
 app.use('/users',userRouter)
+app.use('/adminusers',adminuserRouter)
 app.use('/posts',postRouter)
 app.use('/contact',contactRouter)
 app.use('/allposts',allPostRouter)

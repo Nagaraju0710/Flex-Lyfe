@@ -1,5 +1,5 @@
 import React from "react";
-import AdminNavbar from "../Admin/AdminNav";
+import AdminNavbar from "./AdminNav";
 import d1 from "../Imges/d1.png"
 import d2 from "../Imges/d2.png"
 import d3 from "../Imges/d3.png"
