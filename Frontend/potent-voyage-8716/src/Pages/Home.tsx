@@ -8,6 +8,7 @@ import img4 from "../Imges/img4.png"
 import { Button } from "@chakra-ui/react";
 import { Footer } from "../Components/footer";
 import Navbar from "../Components/Navbar";
+import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <div>
@@ -17,7 +18,7 @@ export default function Home() {
                     <h1 style={{ fontSize: "40px", fontFamily: "Georgia, serif", color: "Highlight" }}>FLEXLYFE </h1>
                     {/* <h1 style={{ marginLeft: "15px", fontSize: "40px", fontFamily: "Georgia, serif", color: "chocolate" }}>COACHING</h1> */}
                     <p style={{ paddingLeft: "540px", color: "burlywood" }}>Already a FlexLyfe? </p>
-                    <p style={{ marginLeft: "10px", border: "3px solid lightblue", borderRadius: "10px", padding: "0px 10px", color: "blue", height: "35px" }}><a href="http://localhost:3000/login">LogIn</a></p>
+                   <Link to="/login"><p style={{ marginLeft: "10px", border: "3px solid lightblue", borderRadius: "10px", padding: "0px 10px", color: "blue", height: "35px" }}>LogIn</p></Link> 
                 </div>
                 <div className="upside">
                     <div style={{marginLeft:'50px'}}>

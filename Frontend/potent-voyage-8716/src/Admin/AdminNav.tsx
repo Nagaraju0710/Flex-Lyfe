@@ -47,9 +47,9 @@ export default function AdminNavbar(){
    
     {/* <Spacer /> */}
     </Box>
-    <Button style={{color:'red',marginTop:"10px"}} onClick={()=>{
-      window.location.href="http://localhost:3000/login"
-    }}>LogOut</Button>
+    <Link to="/adminlogin"><Button style={{color:'red',marginTop:"10px"}} onClick={()=>{
+      
+    }}>LogOut</Button></Link>
   </TabList>
 </Tabs>
 </Box>  

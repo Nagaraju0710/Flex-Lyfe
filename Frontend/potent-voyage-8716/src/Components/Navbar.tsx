@@ -37,9 +37,9 @@ export default function Navbar() {
       <Box >
         <Flex >
           <Box>
-            <Tabs size='md' variant='enclosed' width="195.5%">
+            <Tabs size='md' variant='enclosed' width="171.5%">
               <TabList justifyContent="space-around"   >
-                <Box style={{ width: "90px", height: "40px",}}><img style={{ width: "120px", height: "70px" }} src={logo} alt="" /></Box>
+                <a href="http://localhost:3000/"><Box style={{ width: "90px", height: "40px",}}><img style={{ width: "120px", height: "70px" }} src={logo} alt="" /></Box></a>
                 <Box display="flex" height="60px">
                   <Tab><RouterLink to="/">Home</RouterLink></Tab>
                   <Tab><RouterLink to="/hireacoach">Hire a Coach</RouterLink></Tab>
@@ -48,9 +48,10 @@ export default function Navbar() {
                   <Tab><RouterLink to="/contactus">Contact Us</RouterLink></Tab>
                   {/* <Spacer /> */}
                 </Box>
-                <Button style={{ color: 'red',marginTop:"10px" }} onClick={() => {
-                  window.location.href = "http://localhost:3000/login"
-                }}>LogOut</Button>
+                <Link to="/login"><Button style={{ color: 'red',marginTop:"10px" }} onClick={() => {
+                }}>LogOut</Button></Link>
+                <Link to="/adminlogin"><Button style={{ color: 'blue',marginTop:"10px"}} onClick={() => {
+                }}>Admin</Button></Link>
               </TabList>
             </Tabs>
           </Box>
