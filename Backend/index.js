@@ -1,7 +1,8 @@
 
 
 const express = require('express')
-const {userRouter} = require('./routes/user.Routes')
+const {userRouter} = require('./routes/user.Router')
+const {postRouter} = require('./routes/post.Router')
 const cors = require('cors')
 const {connection} = require('./db')
 const { contactRouter } = require('./routes/contactRouter')
@@ -16,6 +17,7 @@ app.get('/',(req,res)=>{
 
 
 app.use('/users',userRouter)
+app.use('/posts',postRouter)
 app.use('/contact',contactRouter)
 
 
