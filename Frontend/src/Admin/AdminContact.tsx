@@ -1,6 +1,6 @@
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer, Box, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from "react";
-import AdminNavbar from "../Admin/AdminNav";
+import AdminNavbar from "./AdminNav";
 import axios from "axios";
 
 
