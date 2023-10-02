@@ -7,6 +7,9 @@ import Story from "../Pages/Story"
 import LogIn from "../Pages/LogIn"
 import SignUp from "../Pages/SignUp"
 import { Contact } from "../Pages/Contact"
+import AdminDashboard from "../Pages/AdminDashboard"
+import AdminContact from "../Pages/AdminContact"
+import AdminStory from "../Pages/AdminStory"
 
 
 export const AllRoutes=()=>{
@@ -19,6 +22,10 @@ export const AllRoutes=()=>{
                 <Route path="/login" element={<LogIn/>}/>
                 <Route path="/sign-up" element={<SignUp/>}/>
                 <Route path="/contactus" element={<Contact/>}/>
+                <Route path="/admindashboard" element={<AdminDashboard/>}/>
+                <Route path="/admincontactdetails" element={<AdminContact/>}/>
+                <Route path="/adminourstory" element={<AdminStory/>}/>
+                <Route path="/signup" element={<SignUp/>}/>
             </Routes>
         </div>
     )

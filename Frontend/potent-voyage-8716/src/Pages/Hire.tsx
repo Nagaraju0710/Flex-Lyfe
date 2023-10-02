@@ -7,11 +7,12 @@ import img4 from "../Imges/img4.png"
 import img12 from "../Imges/img12.jpg"
 import img13 from "../Imges/img13.jpg"
 import { Button } from "@chakra-ui/react";
+import Navbar from "../Components/Navbar";
 
 export default function Hire() {
     return (
         <div>
-
+<Navbar/>
             <div>
                 <div style={{ display: "flex", marginLeft: "150px", marginTop: "50px" }}>
                     <h1 style={{ fontSize: "40px", fontFamily: "Georgia, serif", color: "Highlight" }}>FLEXLYFE </h1>
@@ -20,7 +21,7 @@ export default function Hire() {
                     <p style={{ marginLeft: "10px", border: "3px solid lightblue", borderRadius: "10px", padding: "0px 10px", color: "blue", height: "35px" }}><a href="http://localhost:3000/login">LogIn</a></p>
                 </div>
                 <div className="upside">
-                    <div>
+                    <div  style={{marginLeft:'50px'}}> 
                         <h1>How it Works</h1>
                     </div>
                     <div>
@@ -143,7 +144,19 @@ export default function Hire() {
                     </div>
 
                 </div>
-                
+            </div>
+
+            <div style={{marginTop:"50px" ,border:"3px solid blueviolet",height:"70px",width:"80%",marginLeft:"120px" ,fontFamily:"serif",fontSize:"20px",color:"blueviolet",borderRadius:"10px"}}>
+                <div>
+                    <a href=""><h1 style={{paddingTop:"30px"}}>Not Sure which coach is right for you? Ask FlexLyfe for a Recommendation.</h1></a>
+                </div>
+            </div>
+
+            <div style={{marginTop:"50px",border:"1px solid blueviolet" ,width:"80%",marginLeft:"120px",height:"100px",color:"white",backgroundColor:"blueviolet",borderRadius:"20px"}}>
+                <div style={{paddingTop:"20px"}}>
+                    <a href=""><h1 style={{fontSize:"30px" ,}}>Still not sure which Program is right for you?</h1></a>
+                    <a href=""><p>Ask FlexLyfe for a Recommandation</p></a>
+                </div>
             </div>
         </div>
 
