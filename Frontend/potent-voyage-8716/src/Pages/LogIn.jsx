@@ -13,19 +13,16 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast()
-  // const dispatch = useDispatch();
-  // const isAuth = useSelector((store) => {
-  const isAuth = true
-  //   return store.authReducer.isAuth;
-  // });
-  // const err = useSelector((store) => store.authReducer.isError);
 
-  // const user = useSelector((store) => {
-  //   return store.authReducer.User;
-  // });
+  const localUser = JSON.parse(localStorage.getItem("user")) || {
+    name: false,
+    isAuth: false,
+    token: false,
+  };
 
-  const user = {name: 'shivam'}
-
+  const [user, setUser] = useState(localUser);
+  const {isAuth,name} = user
+  
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -33,17 +30,18 @@ const Login = () => {
     console.log(email,password)
     const url = 'http://localhost:8080/users/login'
     const res = await axios.post(url,{email,pass: password})
-    console.log(res)
-  //   dispatch(login(email, password)).then(() => {
-  //     if(email == 'admin@gmail.com'){
-  //       navigate('/admin', { replace: true });
-  //       return
-  //     }
-  //     navigate('/home', { replace: true });
-  //   }
-   
-  //  );
-
+    if(res.status != 200){
+      alert('Login failed')
+      return
+    }
+    const data = res.data
+    const {name,token} = data
+    localStorage.setItem(
+      "user",
+      JSON.stringify({token, isAuth: true, name })
+      );
+      
+    setUser({ token, isAuth:true, name });
     toast({
       title: 'login successful',
       // description: "We've created your account for you.",
@@ -52,6 +50,13 @@ const Login = () => {
       duration: 500,
       isClosable: true,
     })
+
+    navigate("/");
+    if (res.status == 200) {
+      alert("User Successfully Login");
+    }
+
+    window.location.reload();
   };
 
 

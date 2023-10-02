@@ -1,59 +1,58 @@
-const express = require("express");
-const { userModel } = require("../Model/user.model");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+
+
+
+
+const express = require('express')
+const { UserModel } = require('../Model/user.model')
+const jwt = require('jsonwebtoken')
+const cors = require('cors')
+const userRouter = express.Router()
 require('dotenv').config()
+userRouter.use(cors());
 
+const bcrypt = require('bcrypt')
 
-const userRouter = express.Router();
+// Register
 
-userRouter.post("/signup", async(req,res) => {
-    try{
-     const {email, password} = req.body;
-    const existingUser = await userModel.findOne({email});
-    if(existingUser){
-        res.status(400).json({msg: "User already exist, please login"})
-    }else{
-      bcrypt.hash(password, 5, async(err, hash) => {
-        if(err){
-            res.status(400).json({error:err})
-        }else{
-            const user = new userModel({email, password:hash});
-            await user.save();
-            res.status(200).json({msg: "User has been registered", user:req.body})
-        }
-      })
+userRouter.post("/register", async (req, res) => {
+    const { name, email, gender, pass } = req.body
+    try {
+        bcrypt.hash(pass, 5, async (err, hash) => {
+            const user = new UserModel({ name, email, gender, pass: hash })
+            await user.save()
+            res.status(200).send({ "msg": "A new user registered" })
+        })
+    } catch (err) {
+        console.log("Error:", err)
     }
-    }catch(err){
-        res.status(400).json({err:"Something wrong"})
-    }
+
 })
 
+// Login
 
-userRouter.post("/login", async(req,res) => {
-    try{
-      const {email, password} = req.body;
-      const user = await userModel.findOne({email});
-      if(!user){
-        res.status(400).json({msg:"User doesn't exist"});
-      }else{
-        bcrypt.compare(password, user.password, (err, decode) => {
-            if(decode){
-                const token = jwt.sign({userId: user._id, email: user.email}, process.env.secretKey)
-                res.status(200).json({msg: "Logged In!!", token});
-            }else{
-                res.status(400).json({error:err});
+userRouter.post("/login", async (req, res) => {
+    const { email, pass } = req.body
+    // console.log('login post request')
+    const user = await UserModel.findOne({ email })
+    if (!user) {
+        res.status(400).send({ "msg": "user not found" })
+        return
+    }
+
+    try {
+        bcrypt.compare(pass, user.pass, async (err, result) => {
+            if (result) {
+                const token = jwt.sign({userId: user._id, name: user.name}, process.env.SECRET_KEY)
+                res.status(200).send({ "msg": "Login successfully", token,name: user.name })
+            } else {
+                res.status(400).send({ "Error": err })
+
             }
         })
-      }
-    }catch(err){
-        res.status(400).json({error:err});
+    } catch (err) {
+        console.log("Error:", err)
     }
+
 })
 
-
-
-
-module.exports = {
-    userRouter
-}
+module.exports = { userRouter }

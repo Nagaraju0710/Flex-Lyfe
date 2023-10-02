@@ -11,8 +11,8 @@ const SignUp = () => {
 const [SignUpStatus, setSignUpStatus] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    Gender:``,
     email: 'Bob@example.com',
+    gender:``,
     pass: '',
   });
 
@@ -21,18 +21,15 @@ const [SignUpStatus, setSignUpStatus] = useState(false);
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
    console.log('formData', formData)
-
+   const url = 'http://localhost:8080/users/register'
     
-    axios.post('https://mock-api-credit-card.onrender.com/Auth', formData)
-      .then((response) => {
-        setSignUpStatus(true)
-      })
-      .catch((error) => {
-        console.error('Sign up failed:', error);
-      });
+  const res = await  axios.post(url,formData)
+
+  console.log(res)
+
   };
 
   return (
@@ -52,8 +49,8 @@ const [SignUpStatus, setSignUpStatus] = useState(false);
           <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} required />
         </div>
         <div>
-          {/* <label>Gender-Card:</label> */}
-          <input maxLength='10' type="text" name="Gender" placeholder='Gender' value={formData.Gender} onChange={handleChange} required />
+          {/* <label>gender-Card:</label> */}
+          <input maxLength='10' type="text" name="gender" placeholder='Gender' value={formData.gender} onChange={handleChange} required />
         </div>
         <div>
           {/* <label>Password:</label> */}
@@ -61,7 +58,7 @@ const [SignUpStatus, setSignUpStatus] = useState(false);
         </div>
         <button type="submit">Submit</button>
       </form>
-      <Link to='/login'><p>Already have an account <sGender style={{color:'#24ADF3'}}>login here</sGender></p></Link>
+      <Link to='/login'><p>Already have an account <sgender style={{color:'#24ADF3'}}>login here</sgender></p></Link>
     </DIV>
     </div>
   );

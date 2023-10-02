@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const postSchema = mongoose.Schema({
-    name: String,
     title:String,
     desc:String,
-    name:String
+    likes:Number,
+    name: String,
 },{
     versionKey: false
 });
