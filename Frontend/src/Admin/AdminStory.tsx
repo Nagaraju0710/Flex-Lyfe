@@ -1,5 +1,5 @@
 import React from "react";
-import AdminNavbar from "../Admin/AdminNav";
+import AdminNavbar from "./AdminNav";
 
 export default function AdminStory(){
     return(
