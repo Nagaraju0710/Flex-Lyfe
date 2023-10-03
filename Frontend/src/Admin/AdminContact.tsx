@@ -10,7 +10,7 @@ export default function AdminContact() {
     console.log("data",data)
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/contact`)
+        axios.get(`https://fitlyfe.onrender.com/contact`)
             .then((data) => {
                 console.log('res',data)
                 setData(data.data.contact)

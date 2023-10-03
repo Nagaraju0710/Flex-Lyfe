@@ -18,7 +18,7 @@ export const Contact = () => {
         if (name == '' && email == '' && mobile == '' && massage == '') {
             toast({ title: 'Fill all the box', status: 'error', position: 'top', duration: 1500, isClosable: true, })
         } else {
-            axios.post(`http://localhost:8080/contact/post`, obj)
+            axios.post(`https://fitlyfe.onrender.com/contact/post`, obj)
                 .then((data) => {
                     // console.log(data.data)
                     toast({ title: 'Thank You', description: data.data.msg, status: 'success', position: 'top', duration: 1500, isClosable: true, })

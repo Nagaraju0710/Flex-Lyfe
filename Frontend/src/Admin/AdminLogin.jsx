@@ -26,7 +26,7 @@ const AdminLogin = () => {
 
   const handleLogin = async () => {
     console.log(email, password);
-    const url = "http://localhost:8080/admin/login";
+    const url = "https://fitlyfe.onrender.com/admin/login";
     const res = await axios.post(url, { email, pass: password });
     if (res.status != 200) {
       toast({

@@ -24,7 +24,7 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log("formData", formData);
-    const url = "http://localhost:8080/users/register";
+    const url = "https://fitlyfe.onrender.com/users/register";
     const res = await axios.post(url, formData);
     console.log(res);
   };

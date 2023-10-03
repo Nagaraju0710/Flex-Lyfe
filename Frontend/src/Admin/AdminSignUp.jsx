@@ -24,7 +24,7 @@ const [SignUpStatus, setSignUpStatus] = useState(false);
   const handleSubmit = async (event) => {
     event.preventDefault();
    console.log('formData', formData)
-   const url = 'http://localhost:8080/adminusers/register'
+   const url = 'https://fitlyfe.onrender.com/admin/register'
     
   const res = await  axios.post(url,formData)
 
