@@ -1,5 +1,5 @@
 # Flexlyfe
-Welcome to our GitHub repository! Here, you'll find the code for our innovative fitness website, `Foodies Paradise` designed to provide a seamless and convenient experience .  🚀🎯
+Welcome to our GitHub repository! Here, you'll find the code for our innovative fitness website, `FlexLyfe` designed to provide a seamless and convenient experience .  🚀🎯
 
 
 
