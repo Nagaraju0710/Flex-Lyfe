@@ -21,7 +21,6 @@ This project is a   fitness website.It allows users to create accounts. The webs
 - `CSS`
 - `Javascript`
 - `React`
-- `Redux`
 - `Chakra UI`
 - `React Router`
 - `Node js`
@@ -66,10 +65,10 @@ To get started with the project, follow these steps:
 ## Our Contributers
 
 
-1.Nag </br>
-2.Devnandan Raj Sharma </br>
+1. Nagaraju Lonka </br>
+2.Dvnandan Raj Sharma </br>
 3.Satya Indra Dev </br>
-4.Thakur Thilak </br>
+4.Sourav Samanta </br>
 
 
 ## Contributing
