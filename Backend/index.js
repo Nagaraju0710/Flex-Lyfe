@@ -2,10 +2,12 @@
 
 const express = require('express')
 const {userRouter} = require('./routes/user.Router')
+const {adminuserRouter} = require('./routes/adminuser.Router')
 const {postRouter} = require('./routes/post.Router')
 const cors = require('cors')
 const {connection} = require('./db')
 const { contactRouter } = require('./routes/contactRouter')
+const { allPostRouter } = require('./routes/allPost.Route')
 
 const app = express()
 app.use(cors());
@@ -17,8 +19,10 @@ app.get('/',(req,res)=>{
 
 
 app.use('/users',userRouter)
+app.use('/adminusers',adminuserRouter)
 app.use('/posts',postRouter)
 app.use('/contact',contactRouter)
+app.use('/allposts',allPostRouter)
 
 
 app.listen(8080, async()=>{
