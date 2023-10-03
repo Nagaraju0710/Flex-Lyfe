@@ -8,9 +8,9 @@ const AdminPost = ({ title, desc, name, _id, updateHandler, deleteHandler }) => 
 
   return (
     <div className='post'>
-      <h2>{title}</h2>
-      <p style={{ marginTop: "-1rem" }}>@{name}</p>
-      <p>{desc}</p>
+      <h2  style={{fontSize: '1.2rem',marginBottom: '1rem', color: '#215b99'}}>{title}</h2>
+      <p className="userName" style={{ marginTop: "-1rem" }}>@{name}</p>
+      <p >{desc}</p>
       <div>
         <button onClick={() => deleteHandler(_id, token)} className='btn'>
           delete

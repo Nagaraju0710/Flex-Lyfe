@@ -6,6 +6,7 @@ import { useToast } from "@chakra-ui/react";
 import UserPost from "../Components/UserPost";
 
 const MyStory = () => {
+
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   
@@ -140,7 +141,7 @@ const MyStory = () => {
 
         <button
           className='btn'
-          onClick={() => addPost({ title, desc, likes: 0 }, token)}
+          onClick={() => addPost({ title, desc, likes: [] }, token)}
         >
           Add
         </button>

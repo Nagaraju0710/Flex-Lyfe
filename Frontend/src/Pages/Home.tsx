@@ -98,9 +98,9 @@ export default function Home() {
       <div>
         <div className='main'>
           <div className='head'>
-            <h1>How Does FitLyfe Help Me?</h1>
+            <h1 style={{marginTop: '4rem'}}>How Does FitLyfe Help Me?</h1>
           </div>
-          <div className='head1'>
+          <div style={{marginBottom: '4rem'}} className='head1'>
             GET YOUR VERY OWN PERSONAL TRAINER THAT PROVIDES EVERYTHING YOU{" "}
             <br /> NEED TO GET IN THE BEST SHAPE OF YOUR LIFE.
           </div>
@@ -185,6 +185,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+       
+
+
       <Footer />
     </div>
   );

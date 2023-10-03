@@ -41,13 +41,10 @@ const Posts = () => {
     getAllPosts();
   };
 
-  const likeHandler = async (id, token) => {
-    const url = `https://fitlyfe.onrender.com/posts/delete/${id}`;
-    const config = {
-      headers: { Authorization: `${token}` },
-    };
-    const res = await axios.delete(url, config);
-    console.log("Delete request response", res);
+  const likeHandler = async (id, body) => {
+    const url = `https://fitlyfe.onrender.com/allposts/update/${id}`;
+    const res = await axios.patch(url, body);
+    console.log("like request", res);
     getAllPosts();
   };
 
