@@ -35,7 +35,6 @@ export const Contact = () => {
 
     return (
         <div>
-            <Navbar />
             <Box w={'80%'} m={'1cm auto'}>
                 <Box display={'flex'} w={'100%'} m={'10px auto'} justifyContent={'space-between'} flexDirection={['column', 'column', 'row']} gap={'15px'}>
                     <Box w={'100%'}>
@@ -59,7 +58,7 @@ export const Contact = () => {
                     </Box>
                 </Box>
                 <Box display={'flex'} flexDirection={'column'}>
-                    <Button onClick={handleSubmit} w={'200px'} m={'10px 0'} bg={'#4FC3F7'} color={'white'}>SEND</Button>
+                    <Button onClick={handleSubmit} w={'200px'} m={'10px 0'} bg={'#A0CE5F'} color={'white'}>Send</Button>
                 </Box>
 
             </Box>

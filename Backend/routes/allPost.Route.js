@@ -32,7 +32,7 @@ allPostRouter.get('/', async (req, res) => {
 
 // patch
 
-allPostRouter.patch("/all/update/:id", async (req, res) => {
+allPostRouter.patch("/update/:id", async (req, res) => {
     const payload = req.body
     const id = req.params.id
     console.log(id)
@@ -51,6 +51,22 @@ allPostRouter.patch("/all/update/:id", async (req, res) => {
 })
 
 // delete
+
+allPostRouter.delete("/delete/:id", async (req, res) => {
+    const id = req.params.id
+    console.log(id)
+    try {
+        const post = await PostModel.findOne({ _id: id })
+        if (post.name == req.body.name) {
+            await PostModel.findByIdAndDelete(id)
+            res.status(200).send({ "msg": "post has been successfully deleted" })
+        } else {
+            res.status(400).send({ "msg": "You are not authorize" })
+        }
+    } catch (err) {
+        res.status(400).send({ "msg": "post not found" })
+    }
+})
 
 
 

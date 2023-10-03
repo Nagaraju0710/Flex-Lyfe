@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #A0CE5F;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +40,177 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+p {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 2rem;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 2rem;
+} */
+
+h1,
+h2,
+.active {
+  color: #88b54a;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.navbar > div > a {
+  margin: 10px 1rem;
+}
+
+.home > .text-wrapper {
+  display: flex;
+}
+.home,
+.login,
+.about,
+.signup {
+  padding: 0 4rem;
+}
+.home p {
+  padding: 1rem;
+}
+
+.home ul {
+  margin-left: 2rem;
+}
+
+p {
+  font-size: 15px !important;
+  color: #333 !important;
+  margin: 8px;
+}
+p:hover{
+  text-decoration: none !important;
+}
+.about li {
+  padding: 6px;
+  margin-left: 1rem;
+}
+
+.login > div,
+.signup > div {
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+label {
+  color: #333;
+  margin-left: 10px;
+}
+
+input,
+select,
+textarea {
+  color: #333;
+  font-size: 15px;
+  min-width: 350px;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  margin: 0.5rem;
+  padding: 0.8rem 1rem;
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 2px 6px;
+  display: block;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+select {
+  min-width: 382px;
+}
+
+.btn {
+  background: #A0CE5F !important;
+  color: #fff;
+  padding: 6px 1rem !important;
+  border-radius: 6px !important;
+  border: none !important;
+  font-size: 14px;
+  outline: none;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.user {
+  border: solid 1px #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.posts {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.posts > div {
+  margin: 10px;
+  padding: 12px ;
+  border: 1px solid #eee;
+  width: fit-content;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 8px;
+  min-width: 200px;
+  border-radius: 6px;
+}
+
+
+.add-post-wrapper {
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+.post{
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.post>input,.post>textarea,.post>select{
+ width: 80%;
+ padding: 10px;
+ min-width: initial;
+}
+
+a{
+  /* color: #88b54a; */
 }

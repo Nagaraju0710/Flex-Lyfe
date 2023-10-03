@@ -1,153 +1,77 @@
-import { Button } from "@chakra-ui/react"
-import img5 from "../Imges/img5.png"
-import img6 from "../Imges/img6.png"
-import img7 from "../Imges/img7.png"
-import img8 from "../Imges/img8.png"
-import img9 from "../Imges/img9.jpg"
-import img10 from "../Imges/img10.png"
-import img11 from "../Imges/img11.png"
-
-
+import "./CSS/footer.css"
+import FB from "../images/socialLinks/facebook-icon.svg"
+import Twitter from "../images/socialLinks/twitter-icon.svg"
+import YT from "../images/socialLinks/youtube-icon.svg"
+import Linkedin from "../images/socialLinks/linkedin-icon.svg"
+import icon from "../images/socialLinks/ifg-lockup-yellow-grey.svg"
 
 export const Footer = () => {
-    return (
-        <div>
-            <div className="mainfooter">
-                <div className="mainf">
 
-                    <div style={{ display: "flex", marginLeft: "300px", gap: "50px" }}>
-                        <div className="f1" >
-                            <div>
-                                <img src={img5} alt="" />
-                            </div>
-                            <div>
-                                <a style={{ color: "lightcoral" }} href="https://apps.apple.com/us/app/fitocracy-exercise-log-online/id509253726">Download FlexLyfe</a>
-                                <p>FREE ON THE APP STORE</p>
-                            </div>
-                        </div>
-                        <div className="f1" >
-                            <div>
-                                <img src={img6} alt="" />
-                            </div>
-                            <div>
-                                <a style={{ color: "lightcoral" }} href="https://play.google.com/store/games?hl=en-IN">Download FlexLyfe</a>
-                                <p>FREE ON THE GOOGLE <br />PLAY STORE</p>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <div className='footer' >
+        <div className='left-side'>
+            <div className='info'>
+                <div className="text">
+                    <h2>About Us</h2>
+                    <hr />
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>dolor sit amet.</p>
+                    <p>About TransUnion Fit Life</p>
+                    <p>Adipisicing elit. Sapiente, delectus.</p>
                 </div>
-                <div className="ftxt">
-                    <h1 style={{ fontSize: "40px", fontFamily: "revert-layer" }}>How Much Does It Cost?</h1>
-                    <h2 style={{ paddingTop: "20px" }}>PROFESSIONAL TRAINING FROM THE WORLD’S BEST COACHES STARTS FOR AS LITTLE AS $1/DAY.</h2>
+                <div className="text">
+                    <h2>Information</h2>
+                    <hr />
+                     <p>Lorem, ipsum dolor.</p>
+                    <p>About BMI Calculator</p>
+                    <p>dolor sit amet.</p>
+                    <p>Lorem, ipsum dolor.</p>
                 </div>
-                <div>
-                    <div style={{ display: "flex" }}>
-                        <div className="fone">
-                            <div>
-                                <h1 style={{ fontSize: "30px", fontFamily: "revert-layer" }}>
-                                    Free
-                                </h1>
-                                <p style={{ fontFamily: "serif", fontWeight: "lighter" }}>NO STRINGS</p>
-                                <p style={{ fontSize: "50px", color: "blueviolet" }}>$0</p>
-                            </div>
-                            <div style={{ fontFamily: "sans-serif", fontStyle: "italic", fontWeight: "lighter" }}>
-                                <ul>
-                                    <li>
-                                        Get free workouts for any goal and experience level
-                                    </li>
-                                    <li>Earn points for every workout logged</li>
-                                    <li>Earn badges for unlocking special achievements</li>
-                                    <li>View progress on any exercise with interactive charts</li>
-                                    <li>Get support and motivation from the most positive fitness community online</li>
-                                    <li>Read daily articles and tips from our Knowledge Center</li>
-                                </ul>
-                                <Button style={{ color: "white", backgroundColor: "rgb(81, 81, 249)" }}>Join Now</Button>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="ftwo">
-                                <div>
-                                    <h1 style={{ fontSize: "30px", fontFamily: "revert-layer" }}>
-                                        Free
-                                    </h1>
-                                    <p style={{ fontFamily: "serif", fontWeight: "lighter" }}>NO STRINGS</p>
-                                    <p style={{ fontSize: "50px", color: "blueviolet" }}>$/1/day</p>
-                                </div>
-                                <div style={{ fontFamily: "sans-serif", fontStyle: "italic", fontWeight: "lighter" }}>
-                                    <ul>
-                                        <li>
-                                            Get free workouts for any goal and experience level
-                                        </li>
-                                        <li>Earn points for every workout logged</li>
-                                        <li>Earn badges for unlocking special achievements</li>
-                                        <li>View progress on any exercise with interactive charts</li>
-                                        <li>Get support and motivation from the most positive fitness community online</li>
-                                        <li>Read daily articles and tips from our Knowledge Center</li>
-                                    </ul>
-
-                                    <Button style={{ color: "white", backgroundColor: "rgb(81, 81, 249)" }}>Hire A Coach</Button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className="text">
+                    <h2>More information</h2>
+                    <hr />
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>dolor sit amet.</p>
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>About TransUnion CIBIL</p>
                 </div>
             </div>
-            <div className="maibutton">
-                <div>
-                    <h2>VIEW COACHES FOR</h2>
+            <p className='policy'>Privacy Policy Terms of Use Sitemap</p>
+        </div>
+        <div className='right-side'>
+            <div>
+                <h2>Have questions?</h2>
+                <button>Contact us</button>
+            </div>
+            <div className='social-images'>
+                <div className="img">
+                    <a href="https://www.facebook.com/TransUnionCIBIL">
+                    <img src={FB} alt="not found" />
+                    </a>
                 </div>
-                <div className="buttons">
-                    <div> <a href=""><Button><p>Weight Loss</p></Button></a></div>
-                   <div><a href=""><Button>At Home Fitness</Button></a></div>
-                    <div><a href=""><Button>Strength Gainz</Button></a></div>
-                    <div><a href=""><Button>Beginner</Button></a></div>
-                    <div>  <a href=""><Button>women Only</Button></a></div>
-                    <div> <a href=""><Button>Nutrition</Button></a></div>
-                   <div><a href=""><Button>Atheletic Performance</Button></a></div>
-                    <div> <a href=""><Button>Look Good Naked</Button></a></div>
-                    <br />
-                    <div><a href=""><Button>Compitition Training</Button></a></div>
-                    <div> <a href=""><Button>View All</Button></a></div>
-                   
+                <div className="img">
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2FCIBIL_Official">
+                    <img src={Twitter} alt="not found" />
+                    </a>
+                </div>
+                <div className="img">
+                    <a href="https://www.youtube.com/user/CIBILonline">
+                    <img src={YT} alt="not found" />
+                    </a>
+                </div>
+                <div className="img">
+                    <a href="https://www.linkedin.com/company/credit-information-bureau-india-limited">
+                    <img src={Linkedin} alt="not found" />
+                    </a>
                 </div>
             </div>
-            <div className="lastfooter">
-                <div className="lastfooter1">
-                    <div>
-                        <a href=""><h1>Support</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><h1>Terms</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><h1>Privacy</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><h1>About</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><h1>Careers</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><h1>Contact</h1></a>
-                    </div>
-                    <div>
-                        <a href=""><img src={img7} alt="" /></a>
-                    </div>
-                    <div>
-                        <a href=""><img src={img8} alt="" /></a>
-                    </div>
-                    <div>
-                        <a href=""><img src={img9} alt="" /></a>
-                    </div>
-                    <div>
-                        <a href=""><img src={img10} alt="" /></a>
-                    </div>
-                    <div>
-                        <a href=""><img src={img11} alt="" /></a>
-                    </div>
-                </div>
+            <div className='icon'>
+                <img src={icon} alt="" />
+            </div>
+            <div className='copy-right'>
+                <p>© Copyright 2023 FitLife Limited (Formerly: FitLife Information Bureau (India) Limited). All Rights Reserved.</p>
             </div>
         </div>
-    )
+    </div>
+  )
 }

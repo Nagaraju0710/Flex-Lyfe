@@ -1,16 +1,18 @@
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, TableContainer, Box, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from "react";
-import AdminNavbar from "../Admin/AdminNav";
+import AdminNavbar from "./AdminNav";
 import axios from "axios";
 
 
 export default function AdminContact() {
     const toast = useToast()
     const [data, setData] = useState([])
-    console.log('data', data)
+    console.log("data",data)
+
     useEffect(() => {
         axios.get(`http://localhost:8080/contact`)
             .then((data) => {
+                console.log('res',data)
                 setData(data.data.contact)
                 console.log(data.data.contact)
             })

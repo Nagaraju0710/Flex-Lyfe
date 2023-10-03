@@ -1,212 +1,165 @@
-.h1{
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size:50px;
 
-}
-.h2{
+
+.h2 {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size:25px;
+  font-size: 25px;
   color: #1a7fa3;
-  font-family: 'Bariol Light',Arial;
+  font-family: "Bariol Light", Arial;
   /* font-size: 18px; */
 }
-.button{
+
+.button {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Bariol Light", Arial;
+}
 
-  font-family: 'Bariol Light',Arial;
-}
-.mainh{
-  margin-top: 60px;
-}
-.head1{
+.head1 {
   padding-top: 20px;
-  font-size:20px;
+  font-size: 20px;
   font-weight: 100;
-
 }
-.head{
-  font-size:40px;
+
+.head {
+  font-size: 40px;
   font-weight: lighter;
   font-style: inherit;
 }
-.fimg{
+.fimg {
   display: flex;
   margin-top: 50px;
   align-items: center;
   gap: 20px;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-family: sans-serif, Helvetica, sans-serif;
 }
-.fimg img{
+.fimg img {
   width: 50px;
 }
-.grid{
+.grid {
   margin: 140px;
   margin-top: 50px;
 }
-.text{
+.text {
   font-weight: lighter;
 }
-.f1{
+.f1 {
   display: flex;
   align-items: center;
   gap: 20px;
   border: 2px solid black;
   border-radius: 20px;
- padding: 10px 10px 20px 30px;
- font-family: sans-serif;
- font-weight: lighter;
- margin-top: 50px;
- background-color: white;
-
+  padding: 10px 10px 20px 30px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  margin-top: 50px;
+  background-color: white;
 }
-.f1 img{
+.f1 img {
   width: 30px;
   height: 30px;
 }
-.mainf{
-  border: 1px solid red;
-  width: 100%;
-  height: 200px;
-
-background-color: rgb(85, 4, 161);
 
 
-}
-.mainfooter{
-  background-color: rgb(231, 229, 229);
-  width: 85%;
-  margin-left: 100px;
-  height: 800px;
-}
-.ftxt{
-  
+.ftxt {
   font-weight: lighter;
   width: 85%;
   height: 150px;
   margin-left: 100px;
   background-color: rgb(231, 229, 229);
-font-style: initial;
-
+  font-style: initial;
 }
-.fone{
+.fone {
   width: 40%;
   margin-left: 100px;
- 
 }
-.ftwo{
+.ftwo {
   width: 60%;
   margin-left: 100px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  
 }
-.buttons{
+.buttons {
   margin-top: 10px;
-display: flex;
-
-
+  display: flex;
 }
-.buttons  Button{
+.buttons Button {
   color: white;
   font-size: x-small;
-  background-color: rgb(81, 81, 249);
-
+  background-color: #a0ce5f;
   margin-left: 25px;
 }
-.maibutton{
+.maibutton {
   margin-top: 60px;
-  
+
   text-align: center;
-
 }
-.lastfooter1{
+.lastfooter1 {
   display: flex;
- gap: 30px;
- margin: 40px;
- padding-left: 100px;
+  gap: 30px;
+  margin: 40px;
+  padding-left: 100px;
 }
-.lastfooter1 img{
-width: 30px;
-height: 35px;
-border-radius: 20px;
+.lastfooter1 img {
+  width: 30px;
+  height: 35px;
+  border-radius: 20px;
+}
 
+.hire {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
 }
-.lastfooter{
-  width: 85%;
-  height: 100px;
-  border: 1px solid red;
-  margin-top: 100px;
-  margin-left: 100px;
-background-color: rgb(11, 55, 55);
-}
-.lastfooter1 h1{
-  font-size: medium;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: lighter;
-  color:white
-
-}
-.hire{
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size:50px;
-}
-.hire1{
+.hire1 {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size:25px;
+  font-size: 25px;
   color: #1a7fa3;
-  font-family: 'Bariol Light',Arial;
+  font-family: "Bariol Light", Arial;
 }
-.hirebutton{
+.hirebutton {
   position: absolute;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-family: 'Bariol Light',Arial;
+  font-family: "Bariol Light", Arial;
 }
-.upside{
+.upside {
   display: flex;
   gap: 80px;
   width: 87%;
   margin-left: 110px;
   height: 50px;
   align-items: center;
-  background-color:#293440;
+  background-color: #293440;
   color: white;
   font-size: medium;
   font-family: sans-serif;
 }
-.downside{
+.downside {
   display: flex;
   gap: 80px;
   width: 87%;
   margin-left: 110px;
   height: 80px;
   align-items: center;
-  background-color:#293440;
+  background-color: #293440;
   color: white;
-  
 }
-.footerhire{
+.footerhire {
   display: flex;
   gap: 50px;
   margin-top: 50px;

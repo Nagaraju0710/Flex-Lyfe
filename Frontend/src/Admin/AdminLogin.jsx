@@ -7,8 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import login_banner from "../images/login-banner.jpg";
 import axios from "axios";
-
-const Login = () => {
+const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const toast = useToast();
@@ -27,7 +26,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     console.log(email, password);
-    const url = "http://localhost:8080/users/login";
+    const url = "http://localhost:8080/admin/login";
     const res = await axios.post(url, { email, pass: password });
     if (res.status != 200) {
       toast({
@@ -40,14 +39,15 @@ const Login = () => {
       });
       return;
     }
-    
     const data = res.data;
     const { name, token } = data;
     localStorage.setItem("user", JSON.stringify({ token, isAuth: true, name }));
 
     setUser({ token, isAuth: true, name });
-  
-    navigate("/ourstory");
+
+   
+
+    navigate("/admindashboard");
     if (res.status == 200) {
       toast({
         title: "login successful",
@@ -81,25 +81,27 @@ const Login = () => {
         />
       </div>
       <DIV>
-        {isAuth ? <h3>Successfully Logged In</h3> : <h2>Login Page</h2>}
+        {isAuth ? <h3>Successfully Logged In</h3> : <h2>Admin Login Page</h2>}
 
         {isAuth && <h3> User: {user.name}</h3>}
         <input
-          style={{ margin: "4px 0" }}
+          style={{ margin: "6px 0" }}
           type='email'
           placeholder='Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          style={{ margin: "4px 0" }}
+          style={{ margin: "6px 0" }}
           type='password'
           placeholder='Password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleLogin}>Login</button>
-        <Link to='/sign-up'>
+        <button style={{ margin: "6px 0" }} onClick={handleLogin}>
+          Login
+        </button>
+        <Link to='/adminsignup'>
           <p>
             Don't have any account{" "}
             <span style={{ color: "#A0CE5F" }}>create new</span>
@@ -109,7 +111,7 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default AdminLogin;
 
 const DIV = styled.div`
   /* width: 400px; */
