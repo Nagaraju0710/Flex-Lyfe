@@ -96,7 +96,7 @@ h2 {
 
 p {
   font-size: 15px !important;
-  color: #333 !important;
+  color: #333 ;
   margin: 8px;
 }
 p:hover{
@@ -211,6 +211,38 @@ select {
  min-width: initial;
 }
 
-a{
-  /* color: #88b54a; */
+
+.post .userName{
+  color:  #999;
+  font-size: 10px;
 }
+
+.like-img{
+  width: 23px;
+  cursor: pointer;
+}
+
+.delete-img{
+  width: 28px;
+  cursor: pointer;
+}
+
+.post-icon{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 1px #ccc; */
+  gap: 10px 6rem ;
+}
+
+
+
+
+
+
+
+
+
+
+

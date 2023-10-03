@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import deleteImg from '../images/delete.png'
 
 const Post = ({ title, desc, device, _id, updateHandler, deleteHandler }) => {
   const [titleValue, setTitleValue] = useState(title);
@@ -25,7 +26,7 @@ const Post = ({ title, desc, device, _id, updateHandler, deleteHandler }) => {
           value={titleValue}
         />
       ) : (
-        <h2>{title}</h2>
+        <h2 style={{fontSize: '1.2rem',marginBottom: '1rem', color: '#215b99'}} >{title}</h2>
       )}
       {editing ? (
         <textarea
@@ -40,7 +41,7 @@ const Post = ({ title, desc, device, _id, updateHandler, deleteHandler }) => {
         <p>{desc}</p>
       )}
 
-      <div>
+      <div className="post-icon">
         {editing ? (
           <button
             style={{ background: "#4696FF" }}
@@ -66,13 +67,20 @@ const Post = ({ title, desc, device, _id, updateHandler, deleteHandler }) => {
           </button>
         )}
 
-        <button
+        {/* <button
           style={{ background: "#4696FF" }}
           onClick={() => deleteHandler(_id, token)}
           className='btn'
         >
           delete
-        </button>
+        </button> */}
+
+        <img
+          className='delete-img'
+          onClick={() => deleteHandler(_id, token)}
+          src={deleteImg}
+          alt=''
+        />
       </div>
     </div>
   );

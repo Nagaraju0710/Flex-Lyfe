@@ -25,7 +25,7 @@ const AdminStory = () => {
 
 
   const getAllPosts = async (token) => {
-    const url = `https://fitlyfe.onrender.com/allposts`;
+    const url = `https://fitlyfe.onrender.comallposts`;
     const res = await axios.get(url);
     console.log(res);
     console.log("Get post", res);
@@ -33,7 +33,9 @@ const AdminStory = () => {
   };
 
   const deleteHandler = async (id, token) => {
-    const url = `https://fitlyfe.onrender.com/posts/delete/${id}`;
+    console.log(token)
+    console.log(id)
+    const url = `https://fitlyfe.onrender.com/allposts/delete/${id}`;
     const config = {
       headers: { Authorization: `${token}` },
     };
@@ -73,7 +75,7 @@ const AdminStory = () => {
       </h2>
       <div className='posts'>
         {allPosts.map((e) => (
-          <AdminPost key={e._id} {...e} likeHandler={likeHandler} />
+          <AdminPost key={e._id} {...e} deleteHandler={deleteHandler} />
         ))}
       </div>
     </>
