@@ -14,6 +14,7 @@ This project is a   fitness website.It allows users to create accounts. The webs
 - User profiles for story telling.
 - Listing creation for including descriptions,title on admin page
 - Admin side full Crud operation we have done
+- User can raise query
 
 ## Technologies Used
 
