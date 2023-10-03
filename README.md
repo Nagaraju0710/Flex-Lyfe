@@ -66,7 +66,7 @@ To get started with the project, follow these steps:
 
 
 1. Nagaraju Lonka </br>
-2.Dvnandan Raj Sharma </br>
+2.Shivam Verma </br>
 3.Satya Indra Dev </br>
 4.Sourav Samanta </br>
 
