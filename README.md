@@ -29,7 +29,7 @@ This project is a   fitness website.It allows users to create accounts. The webs
 
 
 ## Deployment
-The project is deployed and accessible at https://649019f994a8663fb7b93867--sprightly-lolly-ea509d.netlify.app/.
+The project is deployed and accessible at [https://649019f994a8663fb7b93867--sprightly-lolly-ea509d.netlify.app/.](https://frontend-fd1br30h5-nagaraju0710.vercel.app/)
 ## Demo 
 - Landing Page
 
